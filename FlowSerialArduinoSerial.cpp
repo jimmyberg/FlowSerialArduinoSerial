@@ -6,9 +6,7 @@ namespace FlowSerial{
 
 	SerialSocket::SerialSocket(uint8_t* iflowRegister, size_t iregisterLength, uint32_t buadRate)
 		:BaseSocket(iflowRegister, iregisterLength)
-	{
-		Serial.begin(buadRate);
-	}
+	{}
 
 	bool SerialSocket::update(){
 		return update(0);
@@ -32,7 +30,7 @@ namespace FlowSerial{
 					Serial.readBytes(inputData, readNow);
 					ret |= handleData(inputData, readNow);
 				}
-			}while(ret = false && ((millis() & 0xFFFF) - currentTime) < timeoutMs);
+			}while(ret == false && ((millis() & 0xFFFF) - currentTime) < timeoutMs);
 		}
 		return ret;
 	}

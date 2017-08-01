@@ -23,7 +23,7 @@ namespace FlowSerial{
 		 *                              store received data.
 		 * @param      iregisterLength  Length of array that was given.
 		 */
-		SerialSocket(uint8_t* iflowRegister, size_t iregisterLength, uint32_t buadRate = 115200);
+		SerialSocket(uint8_t* iflowRegister, size_t iregisterLength);
 		/**
 		 * @brief      Reads from peer address. This has a timeout functionality
 		 *             of 500 ms. It will try three time before throwing an
