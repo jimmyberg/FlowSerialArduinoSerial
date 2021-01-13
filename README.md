@@ -1,6 +1,6 @@
 # FlowSerialArduinoSerial
 Implementation of the FlowSerial library for the Arduino Serial interface. 
-See https://github.com/overlord1123/FlowSerial for more details about the protocol.
+See https://github.com/jimmyberg/FlowSerial for more details about the protocol.
 
 When installed FlowSerial can be used to share a array with another party that also has FlowSerial installed.
 
